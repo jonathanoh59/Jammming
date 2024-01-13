@@ -1,4 +1,5 @@
 import React from 'react';
+import './Playlist.css';
 import Tracklist from '../Tracklist/Tracklist';
 
 function Playlist(){

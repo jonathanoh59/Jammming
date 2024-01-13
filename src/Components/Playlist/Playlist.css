@@ -1,0 +1,21 @@
+.Playlist {
+    width: 50%;
+    display: inline-block;
+  }
+  
+  .Playlist input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .Playlist-save {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

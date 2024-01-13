@@ -1,4 +1,5 @@
 import React from 'react';
+import './SearchResults.css';
 import Tracklist from '../Tracklist/Tracklist';
 
 function SearchResults(){

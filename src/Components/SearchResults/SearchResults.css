@@ -1,0 +1,10 @@
+.SearchResults {
+    width: 50%;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .SearchResults h2 {
+    color: #1DB954;
+  }
+  

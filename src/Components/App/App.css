@@ -2,6 +2,20 @@
   text-align: center;
 }
 
+.highlight {
+  color: #1DB954; /* Spotify Green */
+}
+
+.App-playlist {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* .App {
+  text-align: center;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +49,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

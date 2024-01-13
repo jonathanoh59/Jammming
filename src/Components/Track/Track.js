@@ -1,4 +1,5 @@
 import React from 'react';
+import './Track.css';
 
 function Track({ track, isRemoval }) {
   const addTrack = () => {
