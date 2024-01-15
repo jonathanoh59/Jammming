@@ -1,13 +1,13 @@
 import React from 'react';
 import './Track.css';
 
-function Track({ track, isRemoval }) {
+function Track({ track, isRemoval, onAdd, onRemove}) {
   const addTrack = () => {
-    // Logic to add track to the playlist
+    onAdd(track);
   };
 
-  const removeTrack = () => {
-    // Logic to remove track from the playlist
+  const removeTrack = (track) => {
+    onRemove(track);
   };
 
   return (
