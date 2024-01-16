@@ -21,13 +21,17 @@ function App() {
   };
 
   const addTrackToPlaylist = (track) => {
+    console.log("entered addTrackToPlaylist");
     if (!playlistTracks.includes(track)) {
       setPlaylistTracks([...playlistTracks, track]);
+      console.log("track added to playlist")
     }
   };
 
   const removeTrackFromPlaylist = (track) => {
+    console.log("Entered removeTrackFromPlaylist")
     setPlaylistTracks(playlistTracks.filter(currentTrack => currentTrack.id !== track.id));
+    console.log("setPlaylistTracks called from removeTrackFromPlaylist");
   };
 
   return (
