@@ -21,18 +21,24 @@ function App() {
   };
 
   const addTrackToPlaylist = (track) => {
-    console.log("entered addTrackToPlaylist");
     if (!playlistTracks.includes(track)) {
       setPlaylistTracks([...playlistTracks, track]);
-      console.log("track added to playlist")
     }
   };
 
   const removeTrackFromPlaylist = (track) => {
-    console.log("Entered removeTrackFromPlaylist")
     setPlaylistTracks(playlistTracks.filter(currentTrack => currentTrack.id !== track.id));
-    console.log(track.id);
-    console.log("setPlaylistTracks called from removeTrackFromPlaylist");
+  };
+
+  const savePlaylist = () => {
+    const trackURIs = playlistTracks.map(track => track.uri);
+    console.log('Saving playlist with URIs:', trackURIs);
+    // Mock saving functionality
+    // Later, here you'll interact with the Spotify API to save the playlist
+
+    // Resetting the current playlist in the web app
+    setPlaylistTracks([]);
+    setPlaylistName('New Playlist');
   };
 
   return (
@@ -46,6 +52,7 @@ function App() {
           playlistTracks={playlistTracks}
           onRemove={removeTrackFromPlaylist}
           onNameChange={updatePlaylistName}
+          onSave ={savePlaylist}
         />
       </div>
     </div>
