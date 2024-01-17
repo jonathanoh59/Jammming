@@ -4,16 +4,20 @@ import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
 import mockTrackObjs from '../mockData/mockTracks';
+import '../Spotify/Spotify.js';
 
 function App() {
   const [searchResults, setSearchResults] = useState(mockTrackObjs);
   const [playlistName, setPlaylistName] = useState('My playlist');
   const [playlistTracks, setPlaylistTracks] = useState([]);
 
-  const handleSearch = (searchTerm) => {
-    // Logic to handle search
-    // For now, we're just using mock data
-    setSearchResults(mockTrackObjs);
+  const handleSearch = async (term) => {
+    try {
+        const searchResults = await this.spotify.search(term);
+        setSearchResults({ searchResults });
+    } catch (error) {
+        console.error('Error during Spotify search:', error);
+    }
   };
 
   const updatePlaylistName = (name) => {
