@@ -2,11 +2,12 @@ import React from 'react';
 import './Track.css';
 
 function Track({ track, isRemoval, onAdd, onRemove}) {
+
   const addTrack = () => {
     onAdd(track);
   };
 
-  const removeTrack = (track) => {
+  const removeTrack = () => {
     onRemove(track);
   };
 

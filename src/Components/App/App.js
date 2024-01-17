@@ -31,6 +31,7 @@ function App() {
   const removeTrackFromPlaylist = (track) => {
     console.log("Entered removeTrackFromPlaylist")
     setPlaylistTracks(playlistTracks.filter(currentTrack => currentTrack.id !== track.id));
+    console.log(track.id);
     console.log("setPlaylistTracks called from removeTrackFromPlaylist");
   };
 
