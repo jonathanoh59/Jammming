@@ -3,7 +3,7 @@ import './App.css';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchResults from '../SearchResults/SearchResults';
 import Playlist from '../Playlist/Playlist';
-import mockTrackObjs from '../mockData/mockTracks';
+//import mockTrackObjs from '../mockData/mockTracks';
 import Spotify from '../Spotify/Spotify.js';
 
 function App() {
@@ -36,14 +36,25 @@ function App() {
 
   const savePlaylist = () => {
     const trackURIs = playlistTracks.map(track => track.uri);
-    console.log('Saving playlist with URIs:', trackURIs);
-    // Mock saving functionality
-    // Later, here you'll interact with the Spotify API to save the playlist
-
-    // Resetting the current playlist in the web app
-    setPlaylistTracks([]);
-    setPlaylistName('New Playlist');
+    try{
+        Spotify.savePlaylist(playlistName, trackURIs);
+        setPlaylistTracks([]);
+        setPlaylistName('New Playlist');
+    } catch (error) {
+        console.error('Error during savePlaylist: ', error);
+    }
   };
+
+  // const savePlaylist = () => {
+  //   const trackURIs = playlistTracks.map(track => track.uri);
+  //   console.log('Saving playlist with URIs:', trackURIs);
+  //   // Mock saving functionality
+  //   // Later, here you'll interact with the Spotify API to save the playlist
+
+  //   // Resetting the current playlist in the web app
+  //   setPlaylistTracks([]);
+  //   setPlaylistName('New Playlist');
+  // };
 
   return (
     <div>
