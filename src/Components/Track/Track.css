@@ -8,11 +8,13 @@
   }
   
   .Track-information h3 {
+    text-align: left;
     margin: 0;
     font-size: 1em;
   }
   
   .Track-information p {
+    text-align: left;
     margin: 0;
     font-size: 0.8em;
     color: gray;

@@ -12,6 +12,12 @@
   margin-top: 20px;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between; /* Adjusts spacing between the two components */
+}
+
+
 /* .App {
   text-align: center;
 }

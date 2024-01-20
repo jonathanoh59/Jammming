@@ -60,7 +60,7 @@ function App() {
     <div className="App">
       <h1>Ja<span className='highlight'>mmm</span>ing</h1>
       <SearchBar onSearch={handleSearch}/>
-      <div>
+      <div className='container'>
         <SearchResults
           searchResults={searchResults}
           onAdd={addTrackToPlaylist}
