@@ -57,8 +57,8 @@ function App() {
   // };
 
   return (
-    <div>
-      <h1>Ja<span>mmm</span>ing</h1>
+    <div className="App">
+      <h1>Ja<span className='highlight'>mmm</span>ing</h1>
       <SearchBar onSearch={handleSearch}/>
       <div>
         <SearchResults
