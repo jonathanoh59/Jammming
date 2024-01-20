@@ -1,6 +1,7 @@
 .Playlist {
-    width: 50%;
+    width:40%;
     display: inline-block;
+    margin-right: 5%;
   }
   
   .Playlist input {
